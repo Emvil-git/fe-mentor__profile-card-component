@@ -21,12 +21,13 @@ body{
     width: 100vw;
     display: grid;
     place-content: center;
-    background:
-        url(images/bg-pattern-top.svg) no-repeat -50vw -90vh,
-        url(images/bg-pattern-bottom.svg) no-repeat 50vw 10vh,
-        var(--cyan-d);
+    background: var(--cyan-d);
 
-        background-size: cover;
+    background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 32vh, left 50vw top 40vh;
+    background-size: 1120px;
     overflow: hidden;
 }
 
@@ -102,10 +103,10 @@ body{
 }
 
 .stats{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    padding: 24px 48px;
+    padding: 24px 32px;
     border-top: 1px solid #dfdfdf;
 }
 
